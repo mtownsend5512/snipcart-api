@@ -109,13 +109,13 @@ $product = (new SnipcartApi($apiKey))->delete()->payload([
 
 ### Class methods
 
-``->to()`` or ``->from()``
+#### ->to() or ->from()
 
 The ``to`` or ``from`` methods are identical and only exist to make your syntax make more semantic sense (``get()->from()`` or ``post()->to()``). These methods expect to receive a relative url path for the Snipcart endpoint you're attempting to communicate with. For example, if you want to get a list of orders from ``https://app.snipcart.com/api/orders``, you would utilize your method of choice and pass it an argument of ``/orders``.
 
 Note: It does not matter if you prepend a slash, append a slash, both, or exclude both. The package gracefully handles your usage of prepended/appended slashes of the relative url. Any of these examples would be acceptable arguments: ``/orders/``, ``/orders``, ``orders/``, or ``orders``.
 
-``->payload()``
+#### ->payload()
 
 The ``payload`` method allows you to pass data through with your request.
 
@@ -125,23 +125,23 @@ Alternatively, if your preference is to manually include your query string for `
 
 If the request is not a ``POST``, ``PUT``, ``PATCH`` or ``DELETE`` operation the payload will automatically be converted to json and sent in the request's body.
 
-``send()``
+#### ->send()
 
 The ``send`` method triggers the api call to be sent and returns the response.
 
-``addHeader()``
+#### ->addHeader()
 
 The ``addHeader`` method accepts two arguments. The first is the header key and the second is the header value. By default this package sets the ``Accept`` and ``Content-Type`` for you.
 
-``addHeaders()``
+#### ->addHeaders()
 
 The ``addHeaders`` method accepts an associative array of key/values to set as headers for the api request.
 
-``responseCode()``
+#### ->responseCode()
 
 The ``responseCode`` method returns the http code received from the server for the request. Note: this method should only be used if you are breaking up your api call into multiple variables.
 
-``successful()``
+#### ->successful()
 
 The ``successful`` method parses the http code received from the server and checks for any 2XX code and returns a boolean. Note: this method should only be used if you are breaking up your api call into multiple variables.
 
