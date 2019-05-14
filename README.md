@@ -109,13 +109,13 @@ $product = (new SnipcartApi($apiKey))->delete()->payload([
 
 ### Class methods
 
-#### ->to() or ->from()
+#### ->to(string '/url') or ->from(string '/url')
 
 The ``to`` or ``from`` methods are identical and only exist to make your syntax make more semantic sense (``get()->from()`` or ``post()->to()``). These methods expect to receive a relative url path for the Snipcart endpoint you're attempting to communicate with. For example, if you want to get a list of orders from ``https://app.snipcart.com/api/orders``, you would utilize your method of choice and pass it an argument of ``/orders``.
 
 Note: It does not matter if you prepend a slash, append a slash, both, or exclude both. The package gracefully handles your usage of prepended/appended slashes of the relative url. Any of these examples would be acceptable arguments: ``/orders/``, ``/orders``, ``orders/``, or ``orders``.
 
-#### ->payload()
+#### ->payload(array ['key' => 'value']) or ->payload('key', 'value')
 
 The ``payload`` method allows you to pass data through with your request.
 
@@ -129,11 +129,11 @@ If the request is not a ``POST``, ``PUT``, ``PATCH`` or ``DELETE`` operation the
 
 The ``send`` method triggers the api call to be sent and returns the response.
 
-#### ->addHeader()
+#### ->addHeader(string 'key', string 'value')
 
 The ``addHeader`` method accepts two arguments. The first is the header key and the second is the header value. By default this package sets the ``Accept`` and ``Content-Type`` for you.
 
-#### ->addHeaders()
+#### ->addHeaders(array ['key' => 'value'])
 
 The ``addHeaders`` method accepts an associative array of key/values to set as headers for the api request.
 
