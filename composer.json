@@ -1,0 +1,55 @@
+{
+    "name": "mtownsend/snipcart-api",
+    "description": "A PHP (and Laravel) package to interface with the Snipcart api.",
+    "keywords": [
+        "snipcart",
+        "snip",
+        "ecommerce",
+        "products",
+        "orders",
+        "subscriptions",
+        "customers",
+        "abandoned",
+        "cart",
+        "refunds",
+        "shipping",
+        "api",
+        "laravel"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mark Townsend",
+            "email": "mtownsend5512@gmail.com",
+            "role": "Developer"
+        }
+    ],
+	"autoload": {
+        "psr-4": {
+            "Mtownsend\\SnipcartApi\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "require": {
+        "php": "~7.0",
+        "guzzlehttp/guzzle": "^6.0"
+    },
+    "require-dev": {
+      "phpunit/phpunit": "^6.4"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mtownsend\\SnipcartApi\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+      "laravel": {
+        "providers": [
+            "Mtownsend\\SnipcartApi\\Providers\\SnipcartApiServiceProvider"
+        ]
+      }
+    },
+    "minimum-stability": "stable"
+}
