@@ -1,4 +1,6 @@
-The easiest and fastest way to get up and running with Snipcart's api.
+<p align="center">
+	The easiest and fastest way to get up and running with Snipcart's api.
+</p>
 
 
 <p align="center">
