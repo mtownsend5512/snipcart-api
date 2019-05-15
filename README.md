@@ -170,7 +170,7 @@ if (!$call->successful()) {
 
 ### Using the global helper (Laravel users)
 
-If you are using Laravel, this package provides a convenient helper function which is globally accessible.
+If you are using Laravel, this package provides a convenient helper function which is globally accessible. The package will automatically set your api key from your ``config/snipcart.php`` file.
 
 ```php
 snipcart()->get()->from('/orders')->send();
@@ -178,16 +178,16 @@ snipcart()->get()->from('/orders')->send();
 
 ### Using the facade (Laravel users)
 
-If you are using Laravel, this package provides a facade. To register the facade add the following line to your ``config/app.php`` under the ``aliases`` key.
+If you are using Laravel, this package provides a facade. To register the facade add the following line to your ``config/app.php`` under the ``aliases`` key. The package will automatically set your api key from your ``config/snipcart.php`` file.
 
 ````php
 'Snipcart' => Mtownsend\SnipcartApi\Facades\SnipcartApi::class,
 ````
 
 ```php
-use SnipcartApi;
+use Snipcart;
 
-SnipcartApi::get()->from('/orders')->send();
+Snipcart::get()->from('/orders')->send();
 ```
 
 ## Credits
