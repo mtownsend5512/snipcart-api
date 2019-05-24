@@ -40,7 +40,7 @@ For Laravel 5.5 and greater, the package will auto register the provider for you
 To register the service provider, add the following line to ``app/bootstrap/app.php``:
 
 ```php
-$app->register(Mtownsend\SnipcartApi\Providers\SnipcartApiServiceProvider::class,);
+$app->register(Mtownsend\SnipcartApi\Providers\SnipcartApiServiceProvider::class);
 ```
 
 ### Publishing the config file (Laravel users)
