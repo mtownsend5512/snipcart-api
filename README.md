@@ -123,7 +123,7 @@ If the request is a ``GET`` operation the payload will be converted to a valid q
 
 Alternatively, if your preference is to manually include your query string for ``GET`` requests you may omit the ``payload`` method entirely and append your query string to the ``to``/``from`` method. E.g. ``->get()->from('/orders?limit=10&offset=5')->send()``.
 
-If the request is not a ``POST``, ``PUT``, ``PATCH`` or ``DELETE`` operation the payload will automatically be converted to json and sent in the request's body.
+If the request is a ``POST``, ``PUT``, ``PATCH`` or ``DELETE`` operation the payload will automatically be converted to json and sent in the request's body.
 
 #### ->send()
 
