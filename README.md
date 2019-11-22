@@ -97,7 +97,7 @@ $product = (new SnipcartApi($apiKey))->put()->payload([
 #### DELETE example
 ```php
 // Delete an allowed domain from your Snipcart account
-$product = (new SnipcartApi($apiKey))->delete()->payload([
+$domain = (new SnipcartApi($apiKey))->delete()->payload([
 	[
 		[
 			'domain' => 'subdomain.my-website.com',
